@@ -1,0 +1,167 @@
+*html,
+:root {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+body {
+  border-top: 10px solid red;
+}
+aside {
+  background: url("../assets/images/house.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border: 1px solid white;
+}
+aside p {
+  color: white;
+  padding-block: 200px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 60px;
+}
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 100px;
+  gap: 80px;
+}
+
+.property-card {
+  /* border:1px solid red; */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.image-card {
+  display: block;
+  height: 300px;
+}
+.image-card img {
+  height: 300px;
+}
+.property-card-details {
+  margin-top: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+.property-card-details p {
+  padding: 0;
+  margin: 0;
+}
+.property-card-details p:nth-child(1) {
+  font-weight: 500;
+}
+.property-card-details p:nth-child(2) {
+  font-weight: 700;
+}
+.property-card-details p:nth-child(3) {
+  font-size: 14px;
+}
+.property-card-details button {
+  padding: 10px;
+  background-color: red;
+  color: white;
+  max-width: 100px;
+  margin-left: auto;
+  border: none;
+  cursor: pointer;
+}
+.error {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loading-message {
+  text-align: center;
+  font-size: 24px;
+}
+.loading {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+.search-btn-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -20%;
+  right: 50%;
+  left: 47%;
+  width: 100%;
+}
+#search {
+  color: white;
+}
+.search {
+  padding: 10px;
+  background-color: red;
+  border: none;
+  padding-inline: 20px;
+
+  max-width: 100px;
+  width: 100%;
+}
+.hide {
+  display: none;
+}
+.block {
+  display: block;
+}
+@media (max-width: 760px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+    padding-inline: 15px;
+  }
+
+  .search-btn-container {
+    position: static;
+  }
+}
+@media (min-width: 760px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 40px;
+  }
+
+  .search-btn-container {
+    display: none !important;
+  }
+  .property-card-details {
+    height: 150px;
+  }
+}
+@media (min-width: 760px) {
+  .search-btn-container {
+    display: inline-block;
+  }
+}
+@media (min-width: 1000px) {
+  .search-btn-container {
+    display: block !important;
+  }
+}

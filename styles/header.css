@@ -1,0 +1,84 @@
+.logo {
+  display: block;
+  height: 100px;
+  width: 100px;
+}
+.logo img {
+  height: 100px;
+  width: 150px;
+}
+header {
+  background-color: white;
+}
+
+nav ul {
+  gap: 40px;
+}
+
+nav ul li {
+  cursor: pointer;
+}
+nav ul li:first-child {
+  border-bottom: 4px solid red;
+}
+.header-btn {
+  padding: 10px;
+  border: none;
+  background-color: red;
+  color: white;
+}
+.menu {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 1200px) {
+  header #nav {
+    display: none;
+  }
+}
+#mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  z-index: 10;
+}
+#mobile-nav ul {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+}
+.overlay {
+  position: fixed;
+  background-color: black;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
+@media (min-width: 1200px) {
+  .overlay {
+    display: none;
+  }
+  #mobile-nav {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 760px) {
+  #mobile-nav ul {
+    padding: 30px;
+    gap: 40px;
+  }
+}

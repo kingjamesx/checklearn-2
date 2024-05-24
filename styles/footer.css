@@ -1,0 +1,37 @@
+#footer {
+  background-color: #363737;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+#footer ul p:first-child {
+  text-decoration: underline;
+  padding-bottom: 5px;
+}
+.footer {
+  display: flex;
+}
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.terms {
+  margin-inline: 10px;
+}
+@media (max-width: 760px) {
+  .footer {
+    flex-wrap: wrap;
+    margin-inline: 20px;
+  }
+  #copy {
+    margin-inline: 20px;
+  }
+}
+@media (min-width: 760px) {
+  .footer,
+  #copy {
+    padding: 40px;
+  }
+}
